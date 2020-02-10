@@ -11,7 +11,6 @@ val RECORD_TYPE_END_OF_FILE              = 1
 val RECORD_TYPE_EXTENDED_SEGMENT_ADDRESS = 2 
 val RECORD_TYPE_EXTENDED_LINEAR_ADDRESS  = 4
 
-private val hexArray = "0123456789ABCDEF".toCharArray()
 fun hex(bytes: ByteArray): String {
     var hexString = ""
     for (i in bytes.indices) {
