@@ -20,23 +20,19 @@ fun hex(bytes: ByteArray): String {
 }
 
 fun readComma(line: String): String {
-    var ret = line.substring(0,1)
-    return ret
+    return line.substring(0,1)
 }
 
 fun readByteLen(line: String): Int {
-    var ret = line.substring(1,3).toInt(radix = 16)
-    return ret
+    return line.substring(1,3).toInt(radix = 16)
 }
 
 fun readAddress(line: String): Int {
-    var ret = line.substring(3,7).toInt(radix = 16)
-    return ret
+    return line.substring(3,7).toInt(radix = 16)
 }
 
 fun readRecordType(line: String): Int {
-    var ret = line.substring(7,9).toInt(radix = 16)
-    return ret
+    return line.substring(7,9).toInt(radix = 16)
 }
 
 fun readData(line: String): ByteArray {
@@ -53,8 +49,7 @@ fun readData(line: String): ByteArray {
 }
 
 fun readChecksum(line: String): Int {
-    var ret = line.substring(line.length-2, line.length).toInt(radix = 16)
-    return ret
+    return line.substring(line.length-2, line.length).toInt(radix = 16)
 }
 
 fun hasComma(x: Any) = when(x) {
@@ -150,6 +145,6 @@ fun fileWriteOutputStrteam(file: String, bytes: ByteArray){
 }
 
 fun main(args: Array<String>) {  
-    fileReadReadLines("b.hex")
-    fileWriteOutputStrteam("b.bin", array)
+    fileReadReadLines("../b.hex")
+    fileWriteOutputStrteam("../b.bin", array)
 }
